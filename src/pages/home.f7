@@ -1,0 +1,32 @@
+<template>
+  <div class="page" data-name="home">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="counter-container elevation-10">
+        <button class="increment-btn button button-fill" id="left-btn" @click=${decrease}>
+          <i class="icon material-icons">arrow_left</i>
+        </button>
+        <div class="counter">${counter}</div>
+        <button class="reduce-btn button button-fill" id="right-btn" @click=${increase}>
+          <i class="icon material-icons">arrow_right</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+export default () => {
+  let counter = 10
+
+  const increase = () => {
+    counter = counter + 1
+  }
+
+  const decrease = () => {
+    if (counter <= 0) return
+    counter = counter - 1
+  }
+
+  return $render
+}
+</script>

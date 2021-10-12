@@ -1,0 +1,113 @@
+/* iOS Cordova Tweak */
+@mixin br($size) {
+  border-radius: $size !important;
+}
+
+.device-cordova.device-ios {
+  height: 100vh;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-clr: #5243ad;
+}
+#app {
+  padding: 1rem;
+  .see {
+    border: 1px solid red;
+  }
+}
+
+.navbar {
+  .navbar-inner {
+    .left .nav-row {
+      display: flex;
+      column-gap: .5rem;
+
+      .logo {
+        width: 3rem;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        @include br(10px);
+
+        background: var(--primary-clr);
+        color: white;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-size: 1rem;
+
+        .logo-top-note {
+          font-size: .80rem;
+          font-weight: bold;
+          color: lighten($color: #000, $amount: 50);
+        }
+        .logo-foot-note {
+          font-size: 1rem;
+          font-weight: bold;
+          color: lighten($color: #5243ad, $amount: 10);
+        }
+      }
+    }
+    button {
+      background-color: #80808020;
+      color: var(--primary-clr);
+      @include br(10px);
+      font-weight: bold;
+    }
+  }
+}
+.page {
+  height: 100vh;
+  // color: rgb(0, 212, 250);
+  // background: linear-gradient(45deg, rgb(33, 202, 146), rgb(0, 212, 250));
+  // clip-path: polygon(0 62%, 100% 29%, 100% 100%, 0% 100%);
+  // clip-path: circle(35.0% at 81% 17%);
+
+  .page-content {
+    padding-top: 0;
+    background-color: #fff;
+
+    .counter-container {
+      width: 100%;
+      height: 50vh;
+
+      margin-top: 1rem;
+
+      background-color: var(--primary-clr);
+      @include br(20px);
+      // box-shadow: 0 3px 10px #00000050;
+
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
+      .increment-btn, .reduce-btn {
+        flex: 0 0 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: lighten($color: #5243ad, $amount: 10);
+        color: white;
+        @include br(10px);
+        font-weight: bold;
+      }
+      .counter {
+        font-size: 4rem;
+        text-align: center;
+        flex: 0 0 70%;
+        color: white;
+      }
+
+    }
+  }
+}

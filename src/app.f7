@@ -1,0 +1,31 @@
+<template>
+  <div id="app">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="left">
+          <div class="nav-row">
+            <span class="logo">C</span>
+            <div class="logo-text">
+              <span class="logo-top-note">Welcome!</span>
+              <span class="logo-foot-note">Ready, lets count...</span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <button class="button button-fill" id="resetButton">
+            <i class="icon material-icons">refresh</i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="view view-main view-init safe-areas" data-url="/"></div>
+  </div>
+</template>
+<script>
+  export default () => {
+    
+
+    return $render
+  }
+</script>
